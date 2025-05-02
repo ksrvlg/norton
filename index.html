@@ -9,7 +9,7 @@
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      padding-bottom: 80px; /* Prevents call bar from overlapping footer */
+      padding-bottom: 80px;
       background-color: #fff;
       color: #333;
     }
@@ -22,7 +22,6 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    /* Header */
     header {
       background-color: #003087;
       color: #fff;
@@ -62,7 +61,6 @@
     .login-btn:hover {
       background-color: #ffca2c;
     }
-    /* Hero Section */
     .hero {
       background-color: #f5f6f5;
       text-align: center;
@@ -76,7 +74,6 @@
       font-size: 18px;
       color: #666;
     }
-    /* Contact Section */
     .contact-section {
       padding: 40px 20px;
       text-align: center;
@@ -119,7 +116,6 @@
     .contact-card a:hover {
       background-color: #ffca2c;
     }
-    /* Products Section */
     .products-section {
       padding: 40px 20px;
       background-color: #fff;
@@ -173,7 +169,6 @@
       color: #666;
       margin-top: 20px;
     }
-    /* Call Bar */
     .call-bar {
       background-color: #DC2626;
       color: #fff;
@@ -230,7 +225,6 @@
       background-color: #ffca2c;
       transform: scale(1.05);
     }
-    /* Footer */
     footer {
       background-color: #003087;
       color: #fff;
@@ -257,7 +251,7 @@
     }
     @media (max-width: 768px) {
       body {
-        padding-bottom: 120px; /* Extra padding for taller call bar on mobile */
+        padding-bottom: 120px;
       }
       .header-content {
         flex-direction: column;
@@ -349,19 +343,19 @@
           <h3>Norton 360 Standard</h3>
           <p>Antivirus, Secure VPN, password manager, and 10GB cloud backup for 1 device.</p>
           <div class="price">$39.99 / year*</div>
-          <a href="https://tryu.live">Buy Now</a>
+          <a href="#" onclick="initiateCall()">Call</a>
         </div>
         <div class="product-card">
           <h3>Norton 360 Deluxe</h3>
           <p>Includes Standard features, parental controls, and 50GB backup for 3 devices.</p>
           <div class="price">$49.99 / year*</div>
-          <a href="https://tryu.live">Buy Now</a>
+          <a href="#" onclick="initiateCall()">Call</a>
         </div>
         <div class="product-card">
           <h3>Norton 360 Advanced</h3>
           <p>Genie AI scam detection, dark web monitoring, and protection for 10 devices.</p>
           <div class="price">$89.99 / year*</div>
-          <a href="https://tryu.live">Buy Now</a>
+          <a href="#" onclick="initiateCall()">Call</a>
         </div>
       </div>
       <p class="products-note">*Prices subject to change. See subscription details on the purchase page.</p>
@@ -374,7 +368,7 @@
       <div class="call-bar-left">
         <img src="https://mma.prnewswire.com/media/1684012/NortonFull_Horizontal_Light_RGB_Web__1.jpg?p=facebook" alt="Norton Logo">
         <p>Need help? Call us: <a href="tel:+18633384903">1-863-338-4903</a> (Toll-Free)</p>
-  </div>
+      </div>
       <div class="call-bar-right">
         <a href="tel:+18633384903">
           <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
@@ -400,5 +394,16 @@
       </div>
     </div>
   </footer>
+
+  <!-- JavaScript for Call Initiation -->
+  <script>
+    function initiateCall() {
+      const confirmCall = confirm("Would you like to call Norton Support at 1-863-338-4903?");
+      if (confirmCall) {
+        window.location.href = "tel:+18633384903";
+        console.log("Call initiated to 1-863-338-4903");
+      }
+    }
+  </script>
 </body>
 </html>
